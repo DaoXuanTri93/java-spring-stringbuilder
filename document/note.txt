@@ -1,0 +1,124 @@
+1. tạo project với https://start.spring.io/
+2. config project cha là pom trong pom.xml   <packaging>pom</packaging>
+3. add new module mới vào project
+4. cài đặt và thay biến môi trường java lên 19
+https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html
+
+5. trên eclipse folder jre cũng đc thay thế bằng folder cha jdk 19, java 19 ko có jre
+- Thêm thư viện log4j vào file pom.xml
+5. cài spring tools trên eclipse
+6.thêm file docker
+    <packaging>jar</packaging>  cho pom của service
+
+Xóa và rebuild project: Xóa toàn bộ thư mục target và tiến hành build lại để đảm bảo không còn cache nào của các build cũ:
+mvn clean install
+mvn clean package
+
+8. mvn clean package  để tạo ra file .jar
+
+
+docker-compose down          # Dừng và xóa các container hiện tại
+docker-compose up --build    # Khởi động lại dịch vụ với build mới
+docker-compose up -d         # Khởi động lại dịch vụ
+
+
+7. docker-compose up --build    
+đang lỗi  >> kiểm tra lại  bằng lệnh mvn -v  >> hỏi GPT về cấu hình version >> xem lỗi gì
+
+đổi version mà ko cần khởi động lại máy
+set MAVEN_HOME=C:\apache-maven-3.9.9
+set PATH=%MAVEN_HOME%\bin;%PATH%
+
+
+1. 
+Mở cửa sổ Preferences:
+•  Trong Eclipse, vào Window > Preferences.
+2. 
+Điều hướng đến Maven:
+•  Trong cửa sổ Preferences, điều hướng đến Maven > Installations.
+
+•  Đảm bảo rằng đường dẫn đến Maven là chính xác và phiên bản Maven được liệt kê.
+
+
+spring-boot:run
+
+
+xem các version liên quan
+mvn -v
+
+
+docker-compose exec master_service sh
+
+
+
+docker exec -it web-portal-demo-db-1 mysql -u root -p
+USE tmn_webportal_demo;
+SHOW TABLES;
+SELECT * FROM your_table_name;
+
+
+INSERT INTO `product` (`name`, `price`) VALUES ('name', '2');
+
+
+
+FRONTEND  - khác por
+
+npm install cors
+
+
+
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDev"
+
+
+
+Kiểm tra và Gỡ lỗi
+Bạn có thể chạy lại ứng dụng với tùy chọn debug để có thông tin chi tiết hơn về lỗi:
+mvn spring-boot:run -Dspring-boot.run.arguments=--debug
+
+mvn spring-boot:run
+
+thêm gateway golang
+1. cài dặt golang
+2. tạo folder gateway-service thuộc project cùng cấp với các service
+3. vào cdm folder gateway-service go mod init gateway-service
+4. tạo các folder config, controllers, middlewares
+5. run cài đặt thư viện mux và http để quản lý định tuyến và thực hiện các yêu cầu HTTP
+go get -u github.com/gorilla/mux
+6. chạy go run main.go
+---------------------------------------------------------------------------------------------
++ Các vấn đề của project demo
+ 1. tạo component 
+  + header
+  + title chức năng  (Search result/ input)
+  + button
+  + textbox
+  + dropdownlist
+  + paging
+  + Label (cạnh textbox) 
+  > css sẽ nằm trong file component (dễ thay đổi, ko lo xung đột)
+  
+ 2. CSS đưa vào file chung
+  + các phần chung sẽ đc sử dụng lại
+  + ko sử dụng css ở file view
+ 
+ 3. Các phần chung cần chỉnh lại
+  + view cùng loại phải giống nhau: 
+      vd view master:
+	     + button phải giống nhau, màu sắc...
+		 + kích thước và cỡ chữ phải giống nhau
+		 + độ cao vùng kết quả tìm kiếm phải giống nhau
+		 + ko tự thêm margin hoặc padding ở file view .vue
+  + màn hình master nếu ko có quá nhiều thành phần thì ko cần scroll ở ngoài
+  + layout thiết kế theo dạng grid, row/column cho các vùng search và input
+    https://element-plus.org/en-US/component/layout.html
+ 
+
+
+
+
+
+
+
+
+
+

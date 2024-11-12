@@ -1,0 +1,12 @@
+share from nn_duc
+
+https://github.com/baimingxuan/vue3-admin-design/blob/main/src/components/Application/src/AppLocalePicker.tsx
+
+https://element.eleme.io/#/en-US/component/table
+https://element.eleme.io/#/en-US/component/form
+2 thành phần quan trọng, dùng nhiều
+
+
+
+https://drive.google.com/drive/folders/1jzgmzxxLq3Da3ysBtiEPNLWyNfjFHQ4o?usp=drive_link
+https://github.com/ducnn230288/vue3

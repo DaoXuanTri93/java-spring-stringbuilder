@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Phiên bản ES tối thiểu là esnext
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true, // Chế độ strict của TypeScript
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".", // Đặt thư mục gốc
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": ["src/*"] // Alias cho thư mục src
+    }
+  },
+  "files": [], // Không cần liệt kê file cụ thể
+  "include": ["src"], // Bao gồm thư mục src
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.vitest.json" }
+  ]
+}

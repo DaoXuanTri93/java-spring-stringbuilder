@@ -1,0 +1,5 @@
+web-portal-demo/bin/
+web-portal-demo/.mvn/
+vue_app/.vscode/
+vue_app/package-lock.json
+vue_app_sync/

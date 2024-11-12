@@ -1,0 +1,14 @@
+.parent {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  
+  .dynamic-width-child {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .fixed-width-child {
+    white-space: nowrap;
+  }

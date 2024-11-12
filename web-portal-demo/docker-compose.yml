@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+ db:
+   image: mysql:5.7
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_DATABASE: tmn_webportal_demo
+     MYSQL_USER: root2
+     MYSQL_PASSWORD: root2
+   ports:
+     - "3307:3306"
+   networks:
+     - my-network  # Gán mạng cho db
+
+ gateway-service:
+    build:
+      context: ./gateway-service
+      dockerfile: Dockerfile.gateway
+    container_name: api-gateway
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db        
+    networks:
+      - my-network
+
+ master_service:
+    image: master-service
+    build:
+      context: ./master-service 
+    ports:
+      - "8082:8082"  # Chuyển tiếp cổng từ 8081 trên máy host đến 8080 trong container
+    # depends_on image phụ thuộc, nó sẽ trước image master-service
+    depends_on:
+      - db                                      # Đảm bảo dịch vụ cơ sở dữ liệu khởi động trước localhost:3306/tmn_webportal_demo
+    environment:
+    # kết nối đến DB image
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/tmn_webportal_demo  # Địa chỉ kết nối đến cơ sở dữ liệu
+      SPRING_DATASOURCE_USERNAME: root2 # Tên người dùng kết nối đến cơ sở dữ liệu
+      SPRING_DATASOURCE_PASSWORD: root2 # Mật khẩu kết nối đến cơ sở dữ liệu
+      DB_HOST: host.docker.internal  # Để kết nối đến MySQL local
+      DB_PORT: 3306
+      DB_NAME: tmn_webportal_demo
+      DB_USER: root2
+      DB_PASSWORD: root2
+    networks:
+      - my-network  # Gán mạng cho db
+    
+networks:
+ my-network:
+   driver: bridge

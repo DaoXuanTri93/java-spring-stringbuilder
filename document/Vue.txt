@@ -1,0 +1,55 @@
+1. Kiến thức Cơ bản về Vue
+Vue Instance: Hiểu về root instance và cách khởi tạo ứng dụng Vue (new Vue() hoặc createApp()).
+Template Syntax: Cách viết HTML trong Vue template với các cú pháp đặc biệt như {{ }} để render dữ liệu.
+Directives: Các directives cơ bản như v-bind, v-model, v-for, v-if, v-show, v-on và cách dùng chúng để quản lý UI.
+Data Binding: Cách kết nối dữ liệu giữa view và model, hiểu rõ data, methods,.... và cách tạo sự phản ứng với dữ liệu (reactivity).
+
+2. Components (Thành phần)
+Component Basics: Tạo và sử dụng component, truyền dữ liệu qua props, và phát ra các sự kiện từ component con ($emit).
+Props & Emits: Kiểm soát dữ liệu từ component cha đến component con và ngược lại.
+Slots: Cách dùng slots để tạo component tái sử dụng cao.
+Dynamic & Async Components: Tạo component động, component tải không đồng bộ.
+
+3. Vue Router (Định tuyến)
+Cấu hình Vue Router: Cài đặt và cấu hình Vue Router để chuyển trang trong ứng dụng.
+Dynamic Routing: Sử dụng :id để tạo các đường dẫn động và hiểu về props cho route params.
+Navigation Guards: Quản lý các điều kiện khi người dùng di chuyển giữa các route (vd: kiểm tra quyền truy cập).
+
+4. State Management với Vuex hoặc Pinia
+Vuex Basics: Hiểu khái niệm state, getters, mutations, và actions trong Vuex để quản lý trạng thái tập trung.
+Modules: Chia Vuex store thành các module nhỏ để dễ quản lý.
+Pinia: Sử dụng Pinia cho Vue 3 để thay thế Vuex với cú pháp đơn giản và tích hợp tốt hơn với Composition API.
+
+5. Composition API (Vue 3)
+Reactive State (reactive & ref): Tạo dữ liệu phản ứng sử dụng reactive và ref.
+Computed & Watchers: Sử dụng computed cho các thuộc tính tự động tính toán và watch để phản ứng với thay đổi dữ liệu.
+Lifecycle Hooks: Các hooks như onMounted, onUpdated, onUnmounted, và cách chúng tương ứng với các lifecycle hooks của Options API.
+Provide/Inject: Cách chia sẻ dữ liệu giữa các component mà không cần truyền qua props.
+
+6. Reactivity System
+Proxy-based Reactivity: Vue 3 sử dụng Proxy cho hệ thống reactivity, hiểu cách reactive và ref hoạt động.
+Deep vs. Shallow Reactive: Phân biệt khi nào sử dụng reactive hoặc shallowReactive để tạo đối tượng phản ứng sâu hoặc nông.
+
+7. Directive Customization
+Custom Directives: Tạo các directives tùy chỉnh để mở rộng chức năng Vue.
+
+8. Handling Asynchronous Operations
+Suspense: Sử dụng <Suspense> để hiển thị fallback cho các component bất đồng bộ.
+Async Components: Sử dụng async components để tải component khi cần.
+
+9. TypeScript trong Vue
+Basic TypeScript Integration: Sử dụng TypeScript để định nghĩa kiểu dữ liệu, props, và component.
+Vue + TypeScript Composition API: Sử dụng các tính năng Composition API cùng với TypeScript để tăng tính ổn định của mã.
+
+10. Performance Optimization
+Lazy Loading & Code Splitting: Tách các component lớn để chỉ tải chúng khi cần.
+Treeshaking và Build Optimization: Tận dụng treeshaking và cấu hình build để giảm kích thước ứng dụng.
+Keep-Alive: Sử dụng <keep-alive> để giữ trạng thái của component khi chuyển trang.
+
+11. Vue DevTools
+Vue DevTools: Sử dụng Vue DevTools để debug, theo dõi state, và kiểm tra component tree.
+
+12. Advanced Composition API Features (Vue 3)
+Teleport: Render các phần tử bên ngoài DOM hiện tại của ứng dụng.
+Custom Composition Functions: Tạo các hàm composition tùy chỉnh để tái sử dụng logic.
+Error Handling trong Vue 3: Sử dụng errorCaptured hoặc try...catch cho các tình huống cần xử lý lỗi.

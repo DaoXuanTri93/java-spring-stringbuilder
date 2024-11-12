@@ -1,0 +1,61 @@
+@import './base.css';
+
+#app {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  width: 100%;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+.full_area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85vh; /* Chiều cao tổng thể */
+}
+
+.search-area {
+  height: 15%; /* Chiều cao cố định cho vùng tìm kiếm */
+  padding: 0px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.results-area {
+  max-height: 60%; /* Chiều cao tối đa cho vùng kết quả */
+  min-height: 60%;
+  overflow-y: auto; /* Cuộn nếu nội dung vượt quá chiều cao */
+  padding: 0px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-area {
+  height: 15%; /* Chiều cao cố định cho vùng nhập sản phẩm */
+  padding: 0px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex; /* Sử dụng Flexbox để sắp xếp ngang */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.custom-header {
+  background-color: #7db4fc; /* Màu nền cho header */
+  color: #333; /* Màu chữ cho header */
+  font-weight: bold; /* In đậm chữ */
+}

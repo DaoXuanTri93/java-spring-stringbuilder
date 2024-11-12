@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  master_service:
+    image: master-service
+    build:
+      context: ./master-service 
+    ports:
+      - "8081:8080"  # Chuyển tiếp cổng từ 8081 trên máy host đến 8080 trong container
+#    network_mode: "host"
+    environment:
+      DB_HOST: host.docker.internal  # Để kết nối đến MySQL local
+      DB_PORT: 3306
+      DB_NAME: tmn_webportal_demo
+      DB_USER: root
+      DB_PASSWORD: root
+#      networks: your_network  
+      
+#    networks:
+#      default:
+#        driver: bridge
+ 
